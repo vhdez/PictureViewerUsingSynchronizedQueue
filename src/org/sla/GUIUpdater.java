@@ -14,6 +14,8 @@ public class GUIUpdater implements Runnable {
     }
 
     public void run() {
+        Thread.currentThread().setName("GUIUpdater Thread");
+
         while (!Thread.interrupted()) {
             // Ask queue for a file to open
             Image next = (Image)originalQueue.get();

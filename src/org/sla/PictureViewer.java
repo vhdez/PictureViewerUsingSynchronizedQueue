@@ -17,6 +17,8 @@ public class PictureViewer extends Application {
         myController = loader.getController();
         myController.setStage(primaryStage);
 
+        Thread.currentThread().setName("PictureView GUI Thread");
+
         // Display the scene
         primaryStage.setTitle("Picture Viewer");
         primaryStage.setScene(new Scene(root));
